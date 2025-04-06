@@ -87,6 +87,15 @@ spec:
             database: immich
             password: immich
       primary:
+        resources:
+          limits:
+            cpu: 1.5
+            memory: 4Gi
+            ephemeral-storage: 2Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
+            ephemeral-storage: 50Mi
         containerSecurityContext:
           readOnlyRootFilesystem: false
         initdb:
@@ -101,6 +110,17 @@ spec:
       architecture: standalone
       auth:
         enabled: false
+        master:
+      resources:
+        limits:
+          cpu: 1.5
+          memory: 4Gi
+          ephemeral-storage: 2Gi
+        requests:
+          cpu: 500m
+          memory: 1Gi
+          ephemeral-storage: 50Mi
+
 
     # Immich components
 
@@ -111,8 +131,8 @@ spec:
         pullPolicy: IfNotPresent
       ingress:
         main:
+          enabled: false
           className: external
-          enabled: true
           annotations:
             # proxy-body-size is set to 0 to remove the body limit on file uploads
             nginx.ingress.kubernetes.io/proxy-body-size: "0"
