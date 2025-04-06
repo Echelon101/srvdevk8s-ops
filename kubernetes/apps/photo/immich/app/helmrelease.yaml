@@ -131,7 +131,7 @@ spec:
         pullPolicy: IfNotPresent
       ingress:
         main:
-          enabled: false
+          enabled: true
           className: external
           annotations:
             # proxy-body-size is set to 0 to remove the body limit on file uploads
