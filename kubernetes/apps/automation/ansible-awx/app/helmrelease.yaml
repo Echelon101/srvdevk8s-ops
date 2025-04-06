@@ -13,7 +13,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: awx-operator
-        namespace: automation
+        namespace: flux-system
   install:
     remediation:
       retries: 3
