@@ -23,7 +23,7 @@ spec:
       retries: 3
   values:
     nfs:
-      path: /volume1/srvdevk8s-storage
+      path: /volume1/srvdevk8s001-storage
       server: 10.28.1.140
     storageClass:
       name: nfs-nas
