@@ -32,3 +32,4 @@ spec:
         projects:
           enabled: true
           storageClassName: nfs-nas
+    controller: {}
