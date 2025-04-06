@@ -23,8 +23,6 @@ spec:
       retries: 3
   values:
     AWX:
-      postgres:
-        enabled: true
       customVolumes:
         postgres:
           enabled: true
