@@ -22,3 +22,23 @@ spec:
     remediation:
       retries: 3
   values:
+    AWX:
+      # enable use of awx-deploy template
+      enabled: true
+      name: awx
+      spec:
+        admin_user: admin
+
+      # configurations for external postgres instance
+      postgres:
+        enabled: true
+    customVolumes:
+      postgres:
+        enabled: true
+        storageClassName: nfs-nas
+      projects:
+        enabled: true
+        storageClassName: nfs-nas
+    operator-controller: {}
+
+    operator-controller-containers: {}
