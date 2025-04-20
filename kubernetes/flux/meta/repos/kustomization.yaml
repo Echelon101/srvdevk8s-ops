@@ -7,3 +7,4 @@ resources:
   - ./ingress-nginx.yaml
   - ./storage-nfs.yaml
   - ./awx-operator.yaml
+  - ./openproject.yaml

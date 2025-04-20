@@ -7,4 +7,4 @@ resources:
 configMapGenerator:
   - name: openproject-values
     files:
-      - values.yaml=./values.yaml
+      - values.yaml=./helm/values.yaml
