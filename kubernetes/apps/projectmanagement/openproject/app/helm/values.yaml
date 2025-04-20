@@ -102,11 +102,11 @@ postgresql:
 
     ## Database password.
     #
-    password: "openproject"
+    password: ""
 
     ## Database root password.
     #
-    postgresPassword: "openproject"
+    postgresPassword: ""
 
 ## Configure resource requests and limits.
 ##
