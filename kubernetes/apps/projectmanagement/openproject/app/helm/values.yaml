@@ -41,14 +41,6 @@ ingress:
   #
   pathType: "Prefix"
 
-## Configure memcached settings.
-#
-memcached:
-  ## When set to true, a memcached will be deployed into current namespace, when false you have to provide your own
-  ## memcached instance.
-  #
-  bundled: true
-
 ## Whether to allocate persistent volume disk for the data directory.
 ## In case of node failure, the node data directory will still persist.
 ##
@@ -79,35 +71,8 @@ persistence:
 
   ## Define the class of PV.
   storageClassName: nfs-nas
-
-## Configure PostgreSQL settings.
-#
-postgresql:
-  ## When set to true, a postgres server will be deployed into current namespace, when false you have to provide your
-  ## own database instance.
-  #
-  bundled: true
-
-  global:
-    ## Database username.
-    #
-    username: "openproject"
-
-    ## Database name.
-    #
-    database: "openproject"
-
-    ## If you are not using a Kubernetes secret to store your postgresql credentials,
-    ## you can specify them here if you really must. Please handle with care!
-
-    ## Database password.
-    #
-    password: ""
-
-    ## Database root password.
-    #
-    postgresPassword: ""
-
+openproject:
+  https: true
 ## Configure resource requests and limits.
 ##
 ## http://kubernetes.io/docs/user-guide/compute-resources/
